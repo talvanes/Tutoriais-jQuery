@@ -1,0 +1,29 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+body {
+	background-color: lightblue;
+	color: maroon;
+	position: absolute;
+}
+h1 {
+	height: 40px;
+	background-color: lightgoldenrodyellow;
+	text-align: center;
+}
+p {
+	background-color: white;
+	color: rgb(32,43,90);
+}
+.com-margem {
+	margin: 8px 10px;
+}
+.com-borda {
+	border: 1px solid black;
+}
+.com-espacamento {
+	padding: 10px 0;
+	padding-left: 2.5em;
+}

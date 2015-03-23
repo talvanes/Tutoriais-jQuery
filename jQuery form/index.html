@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabbed Form</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/validation.js"></script>
+	</head>
+	<body>
+		<form name="myform" onsubmit="return validateForm();">
+			<ul>
+				<li class="title">Who Are You?</li>
+				<li class="fields">
+					<label for="first_name">*First Name:</label><br/>
+					<input type="text" id="first_name" class="req" /><br/>
+					<label for="middle_name">Middle Name:</label><br/>
+					<input type="text" id="middle_name" /><br/>
+					<label for="last_name">Last Name:</label><br/>
+					<input type="text" id="last_name" /><br/>
+					<label for="email">*Email</label><br/>
+					<input type="email" id="email" class="req" /><br/>
+				</li>
+				<li class="title">Where Are You?</li>
+				<li class="fields">
+					<label for="city">City:</label><br/>
+					<input type="text" id="city" /><br/>
+					<label for="state">*State:</label><br/>
+					<input type="text" id="state" class="req" /><br/>
+					<label for="country">Country:</label><br/>
+					<input type="text" id="country" /><br/>
+				</li>
+				<li class="title">What Do You Do?</li>
+				<li class="fields">
+					<label for="occupation">*Occupation:</label><br/>
+					<input type="text" id="occupation" class="req" /><br/>
+					<label for="company">Company:</label><br/>
+					<input type="text" id="company" /><br/>
+					<label for="location">Company Location:</label><br/>
+					<input type="text" id="location" /><br/>
+				</li>
+			</ul>
+			<input type="submit" value="Submit Form" />
+		</form>
+	</body>
+</html>

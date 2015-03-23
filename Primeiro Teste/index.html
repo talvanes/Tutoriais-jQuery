@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>jQuery API 1</title>
+		<meta charset="utf-8" />
+		<style>
+			.red { color: red; }
+			.blue { color: blue; }
+			.black { color: black; }
+		</style>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('h1').mouseover(function(){
+					$('h1').addClass('red').slideUp(300);
+				});
+				$('p').mouseleave(function(){
+					$('h1').slideDown(300);
+				});
+				$('button').click(function(){
+					if($('p').html()=='Parágrafo') {
+						$('p').html('Parágrafo mudou!');
+						$('p').addClass('blue');
+					} else {
+						$('p').html('Parágrafo');
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Título 1</h1>
+		<p>Parágrafo</p>
+		<button>Clique me</button>
+	</body>
+</html>

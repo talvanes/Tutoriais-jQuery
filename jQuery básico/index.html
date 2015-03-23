@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>jQuery selector</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function(){
+            $("h1").mouseenter(function(){
+                $("p").css("visibility","hidden");
+            });
+            $("h1").mouseleave(function(){
+                $(this).css("visibility","hidden");
+            });
+            $("#aparecer").click(function(){
+                $("p").css("visibility","visible");
+                $("h1").css("visibility","visible");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="com-margem com-borda">Um teste</h1>
+    <p class="com-margem com-borda com-espacamento">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ultricies lacus. Mauris placerat, libero ut tincidunt tincidunt, massa ante luctus est, ut feugiat neque nunc bibendum felis. Nunc porta feugiat augue ac suscipit. Suspendisse eget rutrum lorem. In id vestibulum sem. Maecenas sit amet congue orci, malesuada eleifend orci. Sed iaculis urna a purus sodales vehicula. In gravida risus id ante pellentesque tempus. Morbi eget elit condimentum magna laoreet vestibulum et id tortor. Donec mauris libero, malesuada vel bibendum et, fermentum nec eros. Nam suscipit mattis enim at vulputate.
+    </p>
+    <button type="button" id="aparecer">Clique para mostrar</button>
+</body>
+</html>
