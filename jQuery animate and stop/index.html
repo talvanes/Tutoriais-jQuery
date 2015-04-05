@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>jQuery animate() and stop()</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#num1").mouseenter(function(){
+					$(this).animate({width: 'hide'}, 4000);
+					$("#num2").animate({width: 'show'}, 4000);
+				});
+				
+				$("#num2").mouseleave(function(){
+					$(this).animate({width: 'hide'}, 4000);
+					$("#num1").animate({width: 'show'}, 4000);
+				});
+				
+				$(":button").click(function(){
+					$("#num1").stop(true);
+					$("#num2").stop(true);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- Rectangles that slide left and right -->
+		<div id="num1" class="slide-horizontally"></div>
+		<div id="num2" class="slide-horizontally"></div>
+		
+		<p>
+			<button id="stop-animation">Stop Animation</button>
+		</p>
+		
+	</body>
+</html>
