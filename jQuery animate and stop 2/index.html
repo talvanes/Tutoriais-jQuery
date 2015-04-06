@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>jQuery animate() and stop() 2</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#up-down").click(function(){
+					$("div").animate({height: 'toggle'});
+				});
+				
+				$("#left-right").click(function(){
+					$("div").animate({width: 'toggle'});
+				});
+				
+				$("#left-quo").click(function(){
+					$("div").animate({left: '-=50px'});
+				});
+				$("#right-quo").click(function(){
+					$("div").animate({left: '+=50px'});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- Retângulos que deslizam para cima e para baixo -->
+		<div id="num1"></div>
+		<div id="num2"></div>
+		
+		<p>
+			<button id="up-down">Slide Up/Down</button>
+			<button id="left-right">Slide Left/Right</button>
+		</p>
+		<p>
+			<button id="left-quo">&laquo;</button>
+			<button id="right-quo">&raquo;</button>
+		</p>
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+
+body {
+	color: darkslategray;
+	padding: 10px;
+}
+
+#num1, #num2 {
+	width: 50%; height: 200px;
+	position: relative;
+	border: 1px solid #234;
+	border-radius: 3px;
+}
+#num1 {
+	background-color: #349803;
+}
+#num2 {
+	background-color:#fa874a;
+	display: none;
+}
+
+p {
+	text-align: center; margin: 10px;
+}
+
+button {
+	padding: 10px;
+}
