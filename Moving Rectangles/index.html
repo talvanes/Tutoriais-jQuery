@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Chaining and Callback Event Demonstration</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<h1>Chaining and Callback Event Demonstration</h1>
+		<div id="rect1"></div>
+		<div id="rect2"></div>
+		<div id="rect3"></div>
+		<p id="info"></p>
+		<form name="form1" method="post">
+			<p>
+				<label for="choose">What rectangle will you choose?</label>
+				<select id="choose" name="choose">
+					<option value="first" selected>First</option>
+					<option value="second">Second</option>
+					<option value="third">Third</option>
+				</select>
+				<button type="button" id="move-right">&rarr;</button>
+				<button type="button" id="move-left">&larr;</button>
+			</p>
+		</form>
+	</body>
+</html>
