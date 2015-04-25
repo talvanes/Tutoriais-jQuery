@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>
-	$(function(){
-			$("#btn1").click(function(){
-				$("#demo").text("Text: " + $("#test").text());
+		<meta charset="utf-8" />
+		<title>jQuery DOM Get</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(function(){
+				$("#btn1").click(function(){
+					$("#demo").text("Text: " + $("#test").text());
+				});
+				$("#btn2").click(function(){
+					$("#demo").text("HTML: " + $("#test").html());
+				});
+				$('#btn3').click(function(){
+					var value = $('#test2').val();
+					if((value !== "") && (value.trim().length > 0)){
+						$('#demo').text("Value: " + $('#test2').val());
+					} else {
+						$('#demo').text("Please type in a value!")
+						.fadeOut("slow", function(){
+							$('#demo').text("").fadeIn("fast");
+						});
+					}
+				});
+			$("#test3").on("change", function(){
+				var demo = $("#demo");
+				var attr = $(this).val();
+				demo.text(attr + ": " + $("#w3s").attr(attr));
 			});
-			$("#btn2").click(function(){
-				$("#demo").text("HTML: " + $("#test").html());
-			});
-			$('#btn3').click(function(){
-				var value = $('#test2').val();
-				if((value !== "") && (value.trim().length > 0)){
-					$('#demo').text("Value: " + $('#test2').val());
-				} else {
-					$('#demo').text("Please type in a value!")
-					.fadeOut("slow", function(){
-						$('#demo').text("").fadeIn("fast");
-					});
+			$("#check").click(function(){
+				var w3s = $('#w3s');
+				if($(this).is(":checked")){
+					w3s.css('display', 'inline-block');
+				}else{
+					w3s.css('display', 'none');
 				}
 			});
-		$("#test3").on("change", function(){
-			var demo = $("#demo");
-			var attr = $(this).val();
-			demo.text(attr + ": " + $("#w3s").attr(attr));
 		});
-		$("#check").click(function(){
-			var w3s = $('#w3s');
-			if($(this).is(":checked")){
-				w3s.css('display', 'inline-block');
-			}else{
-				w3s.css('display', 'none');
-			}
-		});
-	});
-	</script>
+		</script>
 	</head>
 	<body>
 
