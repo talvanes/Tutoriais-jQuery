@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Panel compoment demo</title>
+	<!-- All Javascripts go here -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="TogglePanel.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<!-- Content goes here -->
+	<script>
+	var panel = new TogglePanel('Conan the Barbarian', "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>", 'blue', '#ffd');
+	var panel2 = new TogglePanel('Another test', "Conan the Barbarian", '#324908', '#facdfd');
+	$('body').append(panel).append(panel2);
+	</script>
+</body>
+</html>
